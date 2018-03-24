@@ -1,13 +1,64 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Consulta Resultados Electorales">
+    <meta name="author" content="alonsus91">
+    <title>Consulta Resultados Electorales</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('build/css/app.css') }}" rel="stylesheet">
+</head>
 
-        {% block javascripts %}{% endblock %}
-    </body>
+<body>
+
+{% block nav %}
+<nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Consulta Resultados Electorales</a>
+        <a class="" href="https://github.com/adrianalonso/consulta-resultados-electorales">
+            <i class="fa fa-github"></i> Github</a>
+    </div>
+</nav>
+{% endblock %}
+
+
+{%  block body %}
+
+{% endblock %}
+
+{% block footer %}
+
+<!-- Footer -->
+<footer class="footer   ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                <ul class="list-inline mb-2">
+                    <li class="list-inline-item">
+                        <a href="https://adrianalonso.es">adrianalonso.es</a>
+                    </li>
+                    <li class="list-inline-item">&sdot;</li>
+                    <li class="list-inline-item">
+                        <a href="https://github.com/adrianalonso/consulta-resultados-electorales">Github</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+{% endblock %}
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="{{ asset('build/js/app.js') }}"></script>
+
+</body>
+
 </html>

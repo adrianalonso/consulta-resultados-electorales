@@ -1,8 +1,164 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <form action="{{ path('transformer') }}" method="POST" enctype="multipart/form-data">
-        {{ form_widget(form) }}
-        <input type="submit">
-    </form>
+
+    <section class=" text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+
+                        <h3>¿Cual es el objetivo de esta web?</h3>
+                        <p class="lead mb-10">
+                            Esta web ofrece un transformador de la información que se encuentra en el
+                            <a target="_blank" href="http://www.infoelectoral.mir.es/min/areaDescarga.html?method=inicio">Área de
+                                descargas</a>
+                            del portal de procesos electorales del Ministerio del Interior. Actualmente
+                            el Ministerio del Interior ofrece unos ficheros .dat con formatode ancho fijo.
+                        </p>
+                        <p class="lead mb-10">
+                            Estos ficheros no son nada intuitivos para el ciudadano de a pie sin conocimientos
+                            técnicos.</p>
+                        <p class="lead mb-10">
+                            Basándome en una <a target="_blank" href="https://github.com/migonzalvar/consulta-resultado-electoral">solución</a>
+                            ya existente que contiene los esquemas para pasar de formato ancho fijo a CSV, ofrezco
+                            un transformador disponible para quien quiera transformar estos documentos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                        <h3>¿Cual es el objetivo de esta web?</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <img src="{{ asset('images/icons8-elections-100.png') }}">
+                        </div>
+                        <h3>Sistema Electoral Transparente</h3>
+                        <p class="lead mb-10">El estado ha comenzado a apostar por la transparencia, pero los datos que
+                            se liberan
+                            no son lo mas accesibles para los ciudadanos</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <img src="{{ asset('images/icons8-octocat-528.png') }}">
+                        </div>
+                        <h3>Transformador Open Source</h3>
+                        <p class="lead mb-10">Liberación del Código fuente de este transformador a través de <a
+                                    href="https://github.com/adrianalonso/consulta-resultados-electorales">Github</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-10 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <img src="{{ asset('images/conference-call.png') }}">
+                        </div>
+                        <h3>Colaboración</h3>
+                        <p class="lead mb-10">Dejo una oportunidad abierta, para el ciudadano que quiera colaborar
+                            y poder aportar mejoras a este proyecto. Ampliemos la posibilidad de transparencia :)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=" text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+
+                        <h3>¿Que tipos de documentos puedes transformar?</h3>
+                        <p class="lead mb-10">
+                            En el archivo de explicación de la base de datos, se puede leer la explicación de los
+                            códigos utilizados para nombrar a los archivos:
+                        </p>
+                        <p class="lead mb-10">
+                            El nombre de los ficheros es el siguiente <strong>nnxxaamm.dat</strong>
+                        </p>
+
+                        <p class="lead mb-10">
+                            <strong>nn</strong> = Código identificativo del tipo de fichero. Estos códigos son los siguientes:
+                        </p>
+                        <ul>
+                            <li> 01 = Fichero de control.</li>
+                            <li> 02 = Fichero de identificación del proceso electoral.</li>
+                            <li> 03 = Fichero de candidaturas.</li>
+                            <li> 04 = Fichero de candidatos.</li>
+                            <li> 05 = Fichero de datos globales de ámbito municipal.</li>
+                            <li> 06 = Fichero de datos de candidaturas de ámbito municipal.</li>
+                            <li> 07 = Fichero de datos globales de ámbito superior al municipio.</li>
+                            <li> 08 = Fichero de datos de candidaturas de ámbito superior al municipio.</li>
+                            <li> 09 = Fichero de datos globales de mesas.</li>
+                            <li> 10 = Fichero de datos de candidaturas de mesas.</li>
+                            <li> 11 = Fichero de datos globales de municipios menores de 250 habitantes (en elecciones
+                                municipales).
+                            </li>
+                            <li> 12 = Fichero de datos de candidaturas de municipios menores de 250 habitantes (en
+                                elecciones municipales).
+                            </li>
+                        </ul>
+                        <p class="lead mb-10"></p>
+                        <p class="lead mb-10">
+                            <strong>xx</strong> = Tipo de proceso electoral:
+                        </p>
+
+                        <ul>
+                            <li> 01 = Referéndum.</li>
+                            <li> 02 = Elecciones al Congreso de los Diputados.</li>
+                            <li> 03 = Elecciones al Senado.</li>
+                            <li> 04 = Elecciones Municipales.</li>
+                            <li> 05 = Elecciones Autonómicas.</li>
+                            <li> 06 = Elecciones a Cabildos Insulares.</li>
+                            <li> 07 = Elecciones al Parlamento Europeo.</li>
+                            <li> 10 = Elecciones a Partidos Judiciales y Diputaciones Provinciales.</li>
+                            <li> 15 = Elecciones a Juntas Generales.</li>
+                        </ul>
+                        <p class="lead mb-10">
+                            <strong>aa</strong> = Dos últimas cifras del año de celebración del proceso electoral.
+                        </p>
+                        <p class="lead mb-10">
+                            <strong>mm</strong> = Dos dígitos correspondientes al mes de celebración del proceso electoral.
+                        </p>
+                        <p class="lead mb-10">
+                            <strong>.dat</strong> = Es siempre la extensión de los ficheros.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials text-center bg-light">
+        <div class="container">
+            <h2 class="mb-5">Selecciona tu fichero</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="{{ path('transformer') }}" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                        {{ form_widget(form.file) }}
+                        </div>
+
+                        <input class="btn btn-primary" type="submit" value="Transformar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 {% endblock body %}

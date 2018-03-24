@@ -1,0 +1,26 @@
+.features-icons {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  .features-icons-item {
+    max-width: 20rem;
+    .features-icons-icon {
+      height: 7rem;
+      i {
+        font-size: 4.5rem;
+      }
+    }
+    &:hover {
+      .features-icons-icon {
+        i {
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+
+  img{
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}

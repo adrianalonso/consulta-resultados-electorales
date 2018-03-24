@@ -1,0 +1,30 @@
+body {
+  @include body-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include body-font;
+  font-weight: 700;
+}
+
+h3{
+  margin-bottom: 1rem;
+}
+section{
+  padding: 2rem 0;
+}
+
+li{
+  list-style: none;
+}
+
+ul{
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+}
